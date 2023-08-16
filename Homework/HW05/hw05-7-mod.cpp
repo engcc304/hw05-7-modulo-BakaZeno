@@ -21,3 +21,31 @@
         February has 29 days
 
 */
+#include <iostream>
+
+int main() {
+    int year;
+
+    printf("Year(s) :\n");
+    scanf("%d", &year);
+
+    bool isLeap = false;
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                isLeap = true;
+            }
+        } else {
+            isLeap = true;
+        }
+    }
+
+    if (isLeap){
+        printf("February has 29 days\n");
+    }
+    else{
+        printf("February has 28 days\n");
+    }
+
+    return 0;
+}
